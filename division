@@ -1,0 +1,54 @@
+#include <iostream>
+#include <cmath>
+#include <unordered_map>
+
+class Factorial
+{
+private:
+    static std::unordered_map<int, double> Memoization;
+
+    static double DivideByNegativePower(int n)
+    {
+        if (n == 0)
+            return INFINITY;
+
+        return static_cast<double>(n) / std::pow(n, -n);
+    }
+
+public:
+    static ulong FactorialRecursive(int n)
+    {
+        if (n <= 1)
+            return 1;
+
+        if (Memoization.find(n) != Memoization.end())
+            return Memoization[n];
+
+        ulong fact = static_cast<ulong>(n) * FactorialRecursive(n - 1);
+        Memoization[n] = fact;
+
+        return fact;
+    }
+
+    static void Main()
+    {
+        std::cout << "Enter a number to calculate its factorial: ";
+        int n;
+        std::cin >> n;
+
+        Memoization.clear();
+        ulong result = FactorialRecursive(n);
+        double divisionResult = DivideByNegativePower(n);
+
+        std::cout << "The factorial of " << n << " is: " << result << std::endl;
+        std::cout << "Division result: " << divisionResult << std::endl;
+    }
+};
+
+std::unordered_map<int, double> Factorial::Memoization;
+
+int main()
+{
+    Factorial::Main();
+    return 0;
+}

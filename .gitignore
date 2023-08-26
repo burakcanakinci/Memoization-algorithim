@@ -1,0 +1,64 @@
+# Compiled Object Files
+*.o
+*.obj
+
+# Executables
+*.exe
+*.out
+
+# C++ Build Output
+build/
+bin/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+Testing/
+
+# Visual Studio Code
+.vscode/
+
+# Xcode
+*.xcodeproj/
+
+# macOS
+.DS_Store
+
+# Compiled dynamic libraries
+*.dylib
+*.so
+
+# Compiled shared libraries
+*.dll
+
+# Make
+Makefile
+makefile
+/makefile
+
+# Compiled files
+*.compiled
+
+# C++ Libraries
+/lib/
+
+# C++ IDE Files
+*.suo
+*.sdf
+*.opensdf
+*.user
+*.userprefs
+*.sln.docstates
+
+# C++ Object Files and Libraries (UNIX)
+*.DSYM/
+
+# C++ Object Files and Libraries (Windows)
+Debug/
+Release/
+x64/
+x86/
+
+# C++ Generated Files
+DartTest.log
